@@ -12,11 +12,15 @@ if (userWord != reverseUserWord) {
 }
 
 function reverse(word) {
-    var wordReverse = "";
+    var reverse = "";
 
     for (var i = word.length - 1; i >= 0; i--) {
-        wordReverse += word[i];   
+        reverse += word[i];   
     }
+
+    /*
+    OR var reverse = word.split('').reverse().join('');
+    */
     
-    return wordReverse;
+    return reverse;
 }
