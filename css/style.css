@@ -1,0 +1,7 @@
+body {
+    height: 100vh;
+}
+
+.img {
+    background-image: url('../img/thumb-1920-1057693.jpg');
+}

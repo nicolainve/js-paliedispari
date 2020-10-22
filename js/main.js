@@ -1,7 +1,7 @@
 // PALINDROMA
 
 do {
-    var userWord = prompt('Inserisci una parola');
+    var userWord = prompt('Inserisci una parola. Oppure il titolo dell\'ultimo film di Christopher Nolan');
 } while (userWord == '');
 
 console.log('Parola: ', userWord);
@@ -10,6 +10,9 @@ var reverseUserWord = reverse(userWord);
 
 if (userWord != reverseUserWord) {
     console.log('Inverso: ', reverseUserWord);
+} else if (userWord == 'tenet') {
+    console.log('Hai inserito una parola palindroma');
+    document.getElementById('img').className = 'img'
 } else {
     console.log('Hai inserito una parola palindroma');
 }
