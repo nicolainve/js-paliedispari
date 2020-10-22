@@ -10,11 +10,12 @@ var reverseUserWord = reverse(userWord);
 
 if (userWord != reverseUserWord) {
     console.log('Inverso: ', reverseUserWord);
-} else if (userWord == 'tenet') {
-    console.log('Hai inserito una parola palindroma');
-    document.getElementById('img').className = 'img'
 } else {
     console.log('Hai inserito una parola palindroma');
+}
+
+if (userWord == 'tenet') {
+    document.getElementById('img').className = 'img';
 }
 
 function reverse(word) {
