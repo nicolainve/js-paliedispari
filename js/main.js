@@ -4,14 +4,14 @@ do {
     var userWord = prompt('Inserisci una parola. Oppure il titolo dell\'ultimo film di Christopher Nolan');
 } while (userWord == '');
 
-console.log('Parola: ', userWord);
+document.getElementById('userword').innerHTML = 'Parola: ' + userWord;
 
 var reverseUserWord = reverse(userWord);
 
 if (userWord != reverseUserWord) {
-    console.log('Inverso: ', reverseUserWord);
+    document.getElementById('reverse-userword').innerHTML = 'Inverso: ' + reverseUserWord;
 } else {
-    console.log('Hai inserito una parola palindroma');
+    document.getElementById('reverse-userword').innerHTML = 'Hai inserito una parola palindroma';
 }
 
 if (userWord == 'tenet') {
@@ -39,28 +39,28 @@ do {
     var choice = prompt('Pari o Dispari').trim();
 } while (choice != 'pari' && choice != 'dispari');
 
-console.log(choice);
+document.getElementById('choice').innerHTML = choice;
 
 do {
     var userNumber = parseInt( prompt('Inserisci un numero da 1 a 5') );
 } while (userNumber < 1 || userNumber > 5);
 
-console.log(userNumber);
+document.getElementById('user-number').innerHTML = userNumber;
 
 var computerNumber = randomNumber();
 
-console.log(computerNumber);
+document.getElementById('computer-number').innerHTML = computerNumber;
 
 var sum = userNumber + computerNumber;
 
-console.log(sum);
+document.getElementById('sum').innerHTML = sum;
 
 var result = evenOdd(userNumber, computerNumber);
 
 if (choice == result) {
-    console.log('Hai vinto!');
+    document.getElementById('feedback').innerHTML = 'Hai vinto!';
 } else {
-    console.log('Hai perso...');
+    document.getElementById('feedback').innerHTML = 'Hai perso...';
 }
 
 function randomNumber() {
@@ -72,10 +72,10 @@ function randomNumber() {
 function evenOdd(num1, num2) {
     var result = num1 + num2;
     if (result % 2 == 0) {
-        console.log('pari');
+        document.getElementById('result').innerHTML = 'pari';
         result = 'pari';
     } else {
-        console.log('dispari');
+        document.getElementById('result').innerHTML = 'dispari';
         result = 'dispari';
     }
 
